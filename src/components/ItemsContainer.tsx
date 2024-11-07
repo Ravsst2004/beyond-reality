@@ -1,4 +1,4 @@
-import ItemCard from "./itemCard";
+import ItemCard from "./ItemCard";
 
 const ItemsContainer = () => {
   const items1 = [
@@ -68,6 +68,10 @@ const ItemsContainer = () => {
             title={item.title}
           />
         ))}
+      </div>
+
+      <div className="flex justify-center mt-10 md:hidden">
+        <button className="btn w-full md:hidden">See All</button>
       </div>
     </>
   );
