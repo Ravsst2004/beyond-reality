@@ -9,7 +9,9 @@ const Footer = () => {
         <div className="flex flex-col items-center mb-8 space-y-6 md:flex-row md:space-y-0 md:justify-between md:items-start">
           <div className="flex flex-col items-center space-y-8 md:items-start md:space-y-4">
             <div className="h-8">
-              <img src="images/logo.svg" alt="" className="w-44 md:ml-3" />
+              <h1 className="text-white md:ml-3 text-3xl font-bold">
+                BeyondReality
+              </h1>
             </div>
             <FooterMenu />
           </div>
