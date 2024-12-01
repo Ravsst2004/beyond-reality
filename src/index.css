@@ -21,6 +21,11 @@
   }
 }
 
+::selection {
+  background-color: #c86dd3;
+  color: #ffffff;
+}
+
 .hamburger {
   cursor: pointer;
   width: 24px;
