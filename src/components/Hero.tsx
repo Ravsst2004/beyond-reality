@@ -67,7 +67,7 @@ const Hero = () => {
         </AnimatePresence>
 
         <div>
-          <div className="relative cursor-none max-w-xl mt-32 mb-32 p-4 font-sans text-3xl text-white uppercase border-2 md:p-10 md:m-32 md:mx-0 md:text-6xl">
+          <div className="relative cursor-none max-w-xl mt-32 mb-32 p-2 font-sans text-3xl text-white uppercase border-2 md:p-10 md:m-32 md:mx-0 md:text-6xl">
             Immersive Journeys Beyond the Realms of Reality
           </div>
           <motion.div
@@ -88,7 +88,7 @@ const Hero = () => {
               WebkitMaskComposite: "exclude",
               mixBlendMode: "difference",
             }}
-            className="absolute z-50 cursor-none top-14 max-w-xl mt-32 mb-32 p-4 font-sans text-3xl text-white uppercase border-2 md:p-10 md:m-32 md:mx-0 md:text-6xl"
+            className="absolute z-50 cursor-none top-14 max-w-xl mt-32 mb-32 p-2 font-sans text-3xl text-white uppercase border-2 md:p-10 md:m-32 md:mx-0 md:text-6xl"
           >
             Immersive Journeys Beyond the Realms of Reality
           </motion.div>
