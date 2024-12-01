@@ -23,7 +23,10 @@ const Menu = ({
         <LinkMenu label="Products" />
         <LinkMenu label="Support" />
       </div>
-      <HamburgerMenu onClick={handleMenu} isOpen={isOpen} />
+      <HamburgerMenu
+        onClick={handleMenu}
+        isOpen={isOpen}
+      />
     </nav>
   );
 };
