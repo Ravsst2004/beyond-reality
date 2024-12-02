@@ -1,7 +1,6 @@
 import React from "react";
 import HamburgerMenu from "./HamburgerMenu";
 import { motion } from "framer-motion";
-import { Link } from "react-router";
 
 interface DesktopMenuProps {
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;

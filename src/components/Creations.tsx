@@ -11,8 +11,6 @@ const Creations = () => {
           <h2 className="text-4xl text-center uppercase md:text-left md:text-5xl md:mx-0">
             Our Creations
           </h2>
-          {/* 
-          <button className="hidden btn md:block">See All</button> */}
         </div>
 
         <ItemsContainer />

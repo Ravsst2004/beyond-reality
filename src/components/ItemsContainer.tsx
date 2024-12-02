@@ -67,7 +67,7 @@ const ItemsContainer = () => {
   // ];
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 justify-between w-full space-y-6 text-2xl text-white uppercase md:flex-row md:space-y-0 ">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 justify-between w-full space-y-6 text-2xl text-white uppercase md:space-y-0 ">
         {items.map((item, index) => (
           <ItemCard
             key={index}
