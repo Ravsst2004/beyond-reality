@@ -1,6 +1,7 @@
 import React from "react";
 import HamburgerMenu from "./HamburgerMenu";
 import { motion } from "framer-motion";
+import { Link } from "react-router";
 
 interface DesktopMenuProps {
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -15,11 +16,16 @@ const DesktopMenu = ({ setIsOpen, isOpen, navItems }: DesktopMenuProps) => {
 
   return (
     <nav className="flex items-center justify-between font-bold">
-      <h1 className="text-white md:ml-3 text-3xl font-bold">BeyondReality</h1>
+      <a
+        href="#hero"
+        className="text-white md:ml-3 text-3xl font-bold"
+      >
+        BeyondReality
+      </a>
       <div className="hidden h-10 font-alata md:flex items-center md:space-x-8">
-        {navItems.map((item) => (
+        {navItems.map((item, index) => (
           <motion.a
-            key={item.id}
+            key={index}
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: item.id * 0.01 }}

@@ -77,10 +77,6 @@ const ItemsContainer = () => {
           />
         ))}
       </div>
-
-      <div className="flex justify-center mt-10 md:hidden">
-        <button className="btn w-full md:hidden">See All</button>
-      </div>
     </>
   );
 };

@@ -11,11 +11,8 @@ import MobileMenu from "./MobileMenu";
 import DesktopMenu from "./DesktopMenu";
 
 const navItems = [
-  { id: 1, label: "About", link: "/about" },
-  { id: 2, label: "Carrers", link: "/carrers" },
-  { id: 3, label: "Events", link: "/events" },
-  { id: 4, label: "Products", link: "/products" },
-  { id: 5, label: "Support", link: "/support" },
+  { id: 1, label: "Features", link: "#features" },
+  { id: 2, label: "Products", link: "#products" },
 ];
 
 interface Size {
@@ -26,7 +23,7 @@ interface Size {
 const Hero = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const [size, setSize] = useState<Size | undefined>(undefined);
+  const [size] = useState<Size | undefined>(undefined);
   const maskX = useMotionValue(0);
   const maskY = useMotionValue(0);
   const maskSize = useMotionValue(0);
@@ -61,6 +58,7 @@ const Hero = () => {
             navItems={navItems}
           />
           <MobileMenu
+            setIsOpen={setIsOpen}
             isOpen={isOpen}
             navItems={navItems}
           />
@@ -73,7 +71,6 @@ const Hero = () => {
           <motion.div
             onHoverStart={() => !size && animate(maskSize, 100)}
             onHoverEnd={() => !size && animate(maskSize, 0)}
-            onPointerDown={() => !size && animate(maskSize, 40)}
             onPointerMove={(e) => {
               if (size) return;
               const { top, left } = (
@@ -88,7 +85,7 @@ const Hero = () => {
               WebkitMaskComposite: "exclude",
               mixBlendMode: "difference",
             }}
-            className="absolute z-50 cursor-none top-14 max-w-xl mt-32 mb-32 p-2 font-sans text-3xl text-white uppercase border-2 md:p-10 md:m-32 md:mx-0 md:text-6xl"
+            className="absolute z-10 cursor-none top-14 max-w-xl mt-32 mb-32 p-2 font-sans text-3xl text-white uppercase border-2 md:p-10 md:m-32 md:mx-0 md:text-6xl"
           >
             Immersive Journeys Beyond the Realms of Reality
           </motion.div>

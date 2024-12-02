@@ -1,12 +1,15 @@
 import { motion } from "framer-motion";
 
-const HamburgerMenu = ({ isOpen, ...props }: { isOpen: boolean }) => {
+interface HamburgerMenuProps {
+  isOpen: boolean;
+  onClick: () => void;
+}
+
+const HamburgerMenu = ({ isOpen, onClick }: HamburgerMenuProps) => {
   return (
-    <motion.div
-      className="md:hidden"
-      {...props}
-    >
+    <motion.div className="md:hidden">
       <motion.button
+        onClick={onClick} // Make sure onClick is passed here
         className={`${isOpen && "open"} z-50 block hamburger md:hidden`}
       >
         <span className="hamburger-top"></span>
