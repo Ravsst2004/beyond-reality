@@ -48,7 +48,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="overflow-hidden "
+      className="overflow-hidden bg-[url('images/mobile/image-hero.jpg')] bg-center md:bg-[url('images/desktop/image-hero.jpg')] md:bg-no-repeat md:bg-cover "
     >
       <div className="container max-w-6xl mx-auto px-6 py-4 md:px-4 ">
         <AnimatePresence>
