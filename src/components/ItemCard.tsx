@@ -16,7 +16,7 @@ const ItemCard = ({
 
   return (
     <motion.div
-      className="bg-gray-900 cursor-pointer "
+      className="bg-gray-900 cursor-pointer w-full h-full"
       onTap={() => setVisible(!isVisible)}
     >
       <div>

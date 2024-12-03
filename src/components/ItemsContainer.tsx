@@ -47,8 +47,7 @@ const items = [
 
 const ItemsContainer = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 0.4, once: true });
-  console.log(isInView);
+  const isInView = useInView(ref, { amount: 0.3, once: true });
 
   return (
     <>
@@ -56,23 +55,20 @@ const ItemsContainer = () => {
         ref={ref}
         className="grid grid-cols-1 md:grid-cols-4 gap-4 justify-between w-full space-y-6 text-2xl text-white uppercase md:space-y-0"
       >
-        {items
-          .map((item, index) => ({ ...item, randomIndex: Math.random() }))
-          .sort((a, b) => a.randomIndex - b.randomIndex)
-          .map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.2 }}
-              animate={{ opacity: isInView ? 1 : 0, scale: isInView ? 1 : 0 }}
-              transition={{ duration: 0.3, delay: index * 0.1 }}
-            >
-              <ItemCard
-                imageUrlDesktop={item.imageUrlDesktop}
-                imageUrlMobile={item.imageUrlMobile}
-                title={item.title}
-              />
-            </motion.div>
-          ))}
+        {items.map((item, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, scale: 0.2 }}
+            animate={{ opacity: isInView ? 1 : 0, scale: isInView ? 1 : 0 }}
+            transition={{ duration: 0.3, delay: Math.random() * 0.9 }}
+          >
+            <ItemCard
+              imageUrlDesktop={item.imageUrlDesktop}
+              imageUrlMobile={item.imageUrlMobile}
+              title={item.title}
+            />
+          </motion.div>
+        ))}
       </div>
     </>
   );
